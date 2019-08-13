@@ -1,0 +1,9 @@
+pip install celery
+celery -A your_application.celery worker
+# The your_application string has to point to your application’s package or module that creates the celery object.
+# for seeing the tasks in celery command use: -l debug
+
+celery -A TestPython.test_flask_celery.flask_config.celery worker -l debug
+
+# to run task in periodic loops with celery beat also run before above command:
+celery beat -A TestPython.test_flask_celery.flask_config.celery --schedule=/tmp/celerybeat-schedule --loglevel=DEBUG --pidfile=/tmp/celerybeat.pid

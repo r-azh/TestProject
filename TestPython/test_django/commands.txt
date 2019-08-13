@@ -1,0 +1,114 @@
+cd /home/azh/Programming/Repositories/TestProjects/TestPython/test_django/test_django/manage.py
+django-admin startproject mysite
+python3.4 manage.py runserver
+
+
+# config postgres
+#sudo apt-get update
+#sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib
+
+sudo su - postgres
+psql
+CREATE DATABASE myproject;
+CREATE USER myprojectuser WITH PASSWORD 'password';
+ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
+ALTER ROLE myprojectuser SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
+\q
+exit
+
+python3.4 manage.py startapp polls
+
+python3.4 manage.py migrate
+
+-----
+in pycharm:
+settings-> language & preferences -> Django
+enable
+add manage.py route
+
+run in pycharm:
+In Run -> Edit Configurations create new configuration
+Script: path_to/manage.py
+Script parameters: runserver
+
+tools-> runt manage.py Task ctrl+alt+R)  -> enter a name
+#https://www.jetbrains.com/help/pycharm/running-tasks-of-manage-py-utility.html
+#https://stackoverflow.com/questions/22935777/debuging-django-manage-py-custom-commands-pycharm
+
+---------------
+Migrations are how Django stores changes to your models (and thus your database schema) - they’re just files on disk.
+You can read the migration for your new model if you like; it’s the file polls/migrations/0001_initial.py
+
+remember the three-step guide to making model changes:
+
+1-Change your models (in models.py).
+2-Run python manage.py makemigrations to create migrations for those changes
+3-Run python manage.py migrate to apply those changes to the database.
+
+--------------------
+sudo python3.4 manage.py createsuperuser
+
+
+------------------
+./deployment_conf/postgres/init_db.sh
+./deployment_conf/postgres/restore_dump.sh data-2017-09-16--13-35-21.sql
+
+./manage.py shell_plus
+
+./manage.py generate_links --gateway_links
+
+
+--------------------
+redis-server --port 6380 --slaveof 127.0.0.1 6379
+# activate virtual env and go to its directory
+celery -A net_appraiser worker -l info
+# activate virtual env and go to its directory
+celery -A net_appraiser beat -l info
+
+------------------
+from cities.models import City
+from cities.models import Country
+iran = Country.objects.get(name='Iran')
+
+from django.contrib.gis.geos import Point
+location = Point(44.49822, 39.29513)
+#region = iran.regions.get(name__icontains='gharb')
+r=iran.regions.filter(name_std__icontains='gharb').last()
+City.objects.get_or_create(name_std='Bazargan', name='Bazargan', country=c, location=location, population=9047, region=r,
+id=City.objects.latest('id').id + 1)
+
+location=Point(44.3834, 37.4339)
+City.objects.get_or_create(name_std='Serow', name='Serow', country=c, location=location, population=1508, region=r, id=City.objects.latest('id').id + 1)
+
+location = Point(46.1226, 38.5019)
+r=iran.regions.filter(name_std__icontains='East Azerbaijan').last()
+City.objects.get_or_create(name_std='Nurduz', name='Nurduz', country=iran, location=location, population=14, region=r, id=City.objects.latest('id').id + 1)
+
+Node.objects.filter(id=1).values()
+Node.objects.values('id', 'name')
+Node.objects.values_list('id', 'name')
+Node.objects.values_list('id', 'name').get(pk=1)
+
+>>> Entry.objects.dates('pub_date', 'year')
+"year" returns a list of all distinct year values for the field.
+
+>>> Entry.objects.dates('pub_date', 'month')
+"year" returns a list of all distinct year values for the field.
+
+>>> Entry.objects.datetimes('pub_date', 'day')
+"day" returns a list of all distinct year/month/day values for the field.
+
+# An F() object represents the value of a model field or annotated column. It makes it possible to refer to model
+    field values and perform database operations using them without actually having to pull them out of the database into Python memory.
+    Instead, Django uses the F() object to generate an SQL expression that describes the required operation at the database level.
+
+# 
+
+
+https://docs.djangoproject.com/en/1.11/topics/db/queries/
+https://docs.djangoproject.com/en/1.11/ref/models/querysets/
+https://docs.djangoproject.com/en/1.11/ref/models/database-functions/
+https://docs.djangoproject.com/en/1.11/ref/models/expressions/
+https://docs.djangoproject.com/en/1.11/ref/models/conditional-expressions/

@@ -1,0 +1,90 @@
+POST /test_inbox_108/_search
+{
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "match_phrase": {
+            "context": "\u0645\u0639\u0627\u0648\u0646"
+          }
+        },
+        {
+          "bool": {
+            "must_not": [
+              {
+                "match_phrase": {
+                  "context": "\u0645\u0639\u0627\u0648\u0646"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "range": {
+            "publish_ts": {
+              "gte": "2017-12-11T17:01:18",
+              "lte": "2017-12-12T00:00:00"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "sort": [
+    {
+      "publish_ts": {
+        "order": "desc"
+      }
+    }
+  ],
+  "from": 0,
+  "size": 10,
+  "_source": false
+}
+
+
+POST /test_inbox_6449266415370243842/_search
+{
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "match_phrase": {
+            "context": "\u062f\u06cc\u062c\u06cc"
+          }
+        },
+        {
+          "range": {
+            "publish_ts": {
+              "gte": "2018-01-27T09:40:55",
+              "lte": "2018-09-22T14:02:40"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "sort": [
+    {
+      "publish_ts": {
+        "order": "desc"
+      }
+    }
+  ],
+  "from": 0,
+  "size": 10,
+  "_source": false
+}
+
+
+POST /test_inbox_108/_search
+{
+"query": {
+  "match_all": {}
+}
+}
+
+GET test_inbox_108
+
+# list all
+GET /_cat/indices?v

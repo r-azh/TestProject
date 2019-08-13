@@ -1,0 +1,28 @@
+
+<html>
+<head>
+<title>Welcome to nginx!</title>
+ <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+  <link rel="manifest" href="/manifest.json">
+
+  <script>
+    var OneSignal = OneSignal || [];
+
+    OneSignal.push(["init", {path: "/", appId: "e8143b16-5d55-4f99-848e-4eb724d2c6f2", autoRegister: false}]);
+  </script>
+</head>
+<body bgcolor="white" text="black">
+<center><h1>Welcome to nginx!</h1></center>
+ <a href="#" id="registerForPushLink">Subscribe to Notifications</a>
+  <script>
+  OneSignal.push(function() {
+    function registerForPush(event) {
+      OneSignal.push(["registerForPushNotifications", {modalPrompt: true}]);
+      event.preventDefault();
+    }
+    document.getElementById("registerForPushLink").addEventListener('click', registerForPush, false);
+
+  });
+  </script>
+</body>
+</html>

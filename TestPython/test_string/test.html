@@ -1,0 +1,710 @@
+'''
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Newsletter</title>
+	<link href="https://fonts.googleapis.com/earlyaccess/notonaskharabic.css" rel="stylesheet">
+	<style type="text/css">
+		/*////// RESET STYLES //////*/
+
+		body {
+			height: 100% !important;
+			margin: 0;
+			padding: 0;
+			width: 100% !important;
+		}
+
+		table {
+			border-collapse: separate;
+		}
+
+		img,
+		a img {
+			border: 0;
+			outline: none;
+			text-decoration: none;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin: 0;
+			padding: 0;
+		}
+
+		p {
+			margin: 1em 0;
+		}
+		/*////// CLIENT-SPECIFIC STYLES //////*/
+
+		.ReadMsgBody {
+			width: 100%;
+		}
+
+		.ExternalClass {
+			width: 100%;
+		}
+
+		.ExternalClass,
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td,
+		.ExternalClass div {
+			line-height: 100%;
+		}
+
+		table,
+		td {
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+
+		#outlook a {
+			padding: 0;
+		}
+
+		img {
+			-ms-interpolation-mode: bicubic;
+		}
+
+		body,
+		table,
+		td,
+		p,
+		a,
+		li,
+		blockquote {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+		/*////// GENERAL STYLES //////*/
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		/*////// TABLET STYLES //////*/
+
+		@media only screen and (max-width: 620px) {
+			.shrink_font {
+				font-size: 62px;
+			}
+			/*////// GENERAL STYLES //////*/
+			#foxeslab-email .table1 {
+				width: 90% !important;
+			}
+			#foxeslab-email .table1-2 {
+				width: 98% !important;
+				margin-left: 1%;
+				margin-right: 1%;
+			}
+			#foxeslab-email .table1-3 {
+				width: 98% !important;
+				margin-left: 1%;
+				margin-right: 1%;
+			}
+			#foxeslab-email .table1-4 {
+				width: 98% !important;
+				margin-left: 1%;
+				margin-right: 1%;
+			}
+			#foxeslab-email .table1-5 {
+				width: 90% !important;
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+
+			#foxeslab-email .tablet_no_float {
+				clear: both;
+				width: 100% !important;
+				margin: 0 auto !important;
+				text-align: center !important;
+			}
+			#foxeslab-email .tablet_wise_float {
+				clear: both;
+				float: none !important;
+				width: auto !important;
+				margin: 0 auto !important;
+				text-align: center !important;
+			}
+
+			#foxeslab-email .tablet_hide {
+				display: none !important;
+			}
+
+			#foxeslab-email .image1 {
+				width: 98% !important;
+			}
+			#foxeslab-email .image1-290 {
+				width: 100% !important;
+				max-width: 290px !important;
+			}
+
+			.center_content {
+				text-align: center !important;
+			}
+			.center_image {
+				margin: 0 auto !important;
+			}
+			.center_button {
+				width: 50% !important;
+				margin-left: 25% !important;
+				max-width: 250px !important;
+			}
+			.centerize {
+				margin: 0 auto !important;
+			}
+		}
+		/*////// MOBILE STYLES //////*/
+
+		@media only screen and (max-width: 480px) {
+			.shrink_font {
+				font-size: 48px;
+			}
+			.safe_color {
+				color: #6a1b9a !important;
+			}
+			/*////// CLIENT-SPECIFIC STYLES //////*/
+			body {
+				width: 100% !important;
+				min-width: 100% !important;
+			}
+			/* Force iOS Mail to render the email at full width. */
+			table[class="flexibleContainer"] {
+				width: 100% !important;
+			}
+			/* to prevent Yahoo Mail from rendering media query styles on desktop */
+			/*////// GENERAL STYLES //////*/
+			img[class="flexibleImage"] {
+				height: auto !important;
+				width: 100% !important;
+			}
+
+			#foxeslab-email .table1 {
+				width: 98% !important;
+			}
+			#foxeslab-email .no_float {
+				clear: both;
+				width: 100% !important;
+				margin: 0 auto !important;
+				text-align: center !important;
+			}
+			#foxeslab-email .wise_float {
+				clear: both;
+				float: none !important;
+				width: auto !important;
+				margin: 0 auto !important;
+				text-align: center !important;
+			}
+
+			#foxeslab-email .mobile_hide {
+				display: none !important;
+			}
+			.auto_height {
+				height: auto !important;
+			}
+		}
+	</style>
+</head>
+
+<body style="padding: 0;margin: 0;" id="foxeslab-email">
+
+	<!-- template-9 -->
+	<table class="table_full editable-bg-color bg_color_ffffff editable-bg-image" bgcolor="#ffffff" width="100%" align="center" mc:repeatable="castellab" mc:variant="Header" cellspacing="0" cellpadding="0" border="0" style="background-image: url(#); background-repeat: no-repeat; background-position: center left; background-size: 100% 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"
+	  background="#">
+		<!-- padding-top -->
+		<tr>
+			<td height="10"></td>
+		</tr>
+
+		<!-- header -->
+		<tr>
+			<td>
+				<table class="table1" width="600" align="center" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td style="padding-top: 8px;padding-right: 40px;padding-bottom: 0;padding-left: 40px">
+							<!-- Logo -->
+							<table class="no_float" align="center" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td align="center">
+										<a href="#">
+										<img width="200px" class="centerize" src="http://staging.newsbx.com/static/email/logo.png" style="display:block; line-height:0; font-size:0; border:0;" border="0" alt="image" />
+									</a>
+									</td>
+								</tr>
+								<!-- margin-bottom -->
+								<tr>
+									<td height="8"></td>
+								</tr>
+							</table>
+							<!-- END logo -->
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!-- END header -->
+
+		<!-- horizontal gap -->
+		<tr>
+			<td height="15"></td>
+		</tr>
+
+		<!-- body -->
+		<tr>
+			<td>
+				<table class="table1" width="600" align="center" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td bgcolor="#fcfcfc" style="padding: 40px 0;border: 1px solid #f2f2f2;border-radius: 5px;">
+							<!-- body-container -->
+							<table class="table1" width="520" align="center" border="0" cellspacing="0" cellpadding="0">
+
+								<!-- email heading -->
+								<tr>
+									<td align="left" style="line-height: 1;color: #282828; font-size: 18px; font-weight: 600; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:right;direction:rtl; mso-line-height-rule: exactly;">
+										<div class="editable-text">
+											<span class="text_container">کاربر گرامی</span>
+										</div>
+									</td>
+								</tr>
+								<!-- END email heading -->
+
+								<!-- horizontal gap -->
+								<tr>
+									<td height="20"></td>
+								</tr>
+
+								<!-- email details -->
+								<tr>
+									<td align="left" style="line-height: 1.8;color: #757575; font-size: 14px; font-weight: 400; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:right;direction:rtl; mso-line-height-rule: exactly;">
+										<div class="editable-text">
+											<span class="text_container">محتوای اینباکس {% inbox_name %} به روزرسانی شده است. </span>
+											<br />
+											<span class="text_container">شما می‌توانید 10 منشن آخر دریافت شده تا این لحظه را در ادامه مشاهده کنید. امیدواریم که محتوای درخواستی، رضایت شما را جلب نماید.</span>
+										</div>
+									</td>
+								</tr>
+								<!-- END email details -->
+
+								<!-- horizontal gap -->
+								<tr>
+									<td height="20"></td>
+								</tr>
+
+								<!-- horizontal separator -->
+								<tr>
+									<td>
+										<table align="center" class="table1" width="460" border="0" cellpadding="0" cellspacing="0">
+											<tr>
+												<td height="1" bgcolor="#e0e0e0"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+
+								<!-- horizontal gap -->
+								<tr>
+									<td height="20"></td>
+								</tr>
+								<!-- banner -->
+								<tr>
+									<td>
+										<table class="table1" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td bgcolor="#fcfcfc" style="border-radius: 5px;">
+													<table class="table1" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+														<tr>
+															<td align="center">
+																<a href="#">
+																	<img class="centerize" src="https://via.placeholder.com/520x120" style="display:block; line-height:0; font-size:0; border:0;max-width: 100%;" border="0" alt="banner" />
+																</a>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!-- END banner -->
+								<!-- horizontal gap -->
+								<tr>
+									<td height="15"></td>
+								</tr>
+
+								{% for mention in mentions %}
+									{% if mention.image %}
+
+								<!-- row-with-image -->
+								<tr>
+									<td bgcolor="#ffffff" style="padding: 0 20px;border: 1px solid #ebebeb;border-radius: 5px;">
+										<table border="0" cellpadding="0" cellspacing="0" style="width:100%;">
+											<tr>
+												<td>
+													<!-- column-1 -->
+													<table width="105" class="table1-3" align="right" border="0" cellpadding="0" cellspacing="0">
+														<!-- margin-top -->
+														<tr>
+															<td height="40"></td>
+														</tr>
+														<tr>
+															<td>
+																<table height="100" width="105" align="center" border="0" cellpadding="0" cellspacing="0" class="table1-3">
+																	<tr>
+																		<td align="center" valign="middle" bgcolor="#fcfcfc" style="border: 1px solid #ebebeb;border-radius: 5px;height: 100px">
+																			<a href="#">
+																			<img src="{% mention.image %}" style="display:block; line-height:0; font-size:0; border:0;max-width: 100%;;max-height: 100%;" border="0" alt="image" />
+																		</a>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<!-- margin-bottom -->
+														<tr class="tablet_hide">
+															<td height="20"></td>
+														</tr>
+													</table>
+													<!-- ENd column-1 -->
+
+													<!-- vertical gutter -->
+													<table class="table1-3" width="19" align="right" border="0" cellpadding="0" cellspacing="0">
+														<tr>
+															<td height="1"></td>
+														</tr>
+													</table>
+
+													<!-- column-2 -->
+													<table width="265" class="table1-3" align="right" border="0" cellpadding="0" cellspacing="0">
+														<!-- margin-top -->
+														<tr>
+															<td height="25"></td>
+														</tr>
+														<tr>
+															<td>
+																<table width="265" align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 265px;">
+																	<tr>
+																		<td align="left" style="line-height: 1;color: #282828;font-size: 14px; font-weight: 600; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:right;direction:rtl; mso-line-height-rule: exactly;">
+																			<div class="editable-text">
+																				<img src="{% mention.content.source.image %}" alt="{% mention.content.source.platform.name %}" width="30" height="30" style="border-radius:50%;" />&nbsp;<span class="text_container" style="display:block;margin-top:6px">{% mention.content.source.name %}</span>
+																			</div>
+																		</td>
+																	</tr>
+
+																	<!-- horizontal gap -->
+																	<tr>
+																		<td height="10"></td>
+																	</tr>
+
+																	<tr>
+																		<td align="left" style="line-height: 1.8;color: #757575;font-size: 12px; font-weight: 400; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:right	;direction:rtl; mso-line-height-rule: exactly;">
+																			<div class="editable-text">
+																				<span class="text_container">{% mention.summary %}</span>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<!-- margin-bottom -->
+														<tr class="tablet_hide">
+															<td height="20"></td>
+														</tr>
+													</table>
+													<!-- ENd column-2 -->
+
+													<!-- vertical gutter -->
+													<table class="table1-3" width="19" align="left" border="0" cellpadding="0" cellspacing="0">
+														<tr>
+															<td height="1"></td>
+														</tr>
+													</table>
+
+													<!-- column-3 -->
+													<table width="80" class="table1-3" align="right" border="0" cellpadding="0" cellspacing="0">
+														<!-- margin-top -->
+														<tr>
+															<td height="45"></td>
+														</tr>
+														<tr>
+															<td valign="top">
+																<table align="center" border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td align="center" style="line-height: 1;color: #282828;font-size: 14px; font-weight: 600; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:center;direction:rtl; mso-line-height-rule: exactly;">
+																			<div class="editable-text">
+																				<img src="{% mention.content.source.image %}" alt="{% mention.content.source.name %}" width="30" height="30" style="border-radius:50%;" />
+																			</div>
+																		</td>
+																	</tr>
+
+																	<!-- horizontal gap -->
+																	<tr>
+																		<td height="15"></td>
+																	</tr>
+
+																	<tr>
+																		<td align="center" style="line-height: 1;color: #5e35b1;font-size: 14px; font-weight: 600; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:center;direction:rtl; mso-line-height-rule: exactly;">
+																			<table bgcolor="#93c054" width="60" height="30" align="center" border="0" cellpadding="0" cellspacing="0" style="border-radius:5px; border-collapse: separate">
+																				<tr>
+																					<td mc:edit="text105" align="center" valign="middle" style="font-size: 12px; font-weight: 400; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;mso-line-height-rule: exactly;">
+																						<div class="editable-text">
+																							<span class="text_container">
+																								<a href="#" class="text_color_ffffff" style="text-decoration: none; color: #ffffff;">مشاهده</a>
+																							</span>
+																						</div>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<!-- margin-bottom -->
+														<tr>
+															<td height="20"></td>
+														</tr>
+													</table>
+													<!-- ENd column-3 -->
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!-- END row-with-image -->
+								<!-- horizontal gap -->
+								<tr>
+									<td height="15"></td>
+								</tr>
+									{% else %}
+								<!-- row-without-image -->
+								<tr>
+									<td bgcolor="#ffffff" style="padding: 0 20px;border: 1px solid #ebebeb;border-radius: 5px;">
+										<table border="0" cellpadding="0" cellspacing="0" style="width:100%;">
+											<tr>
+												<td>
+													<!-- column-1 -->
+													<table width="389" class="table1-3" align="right" border="0" cellpadding="0" cellspacing="0">
+														<!-- margin-top -->
+														<tr>
+															<td height="25"></td>
+														</tr>
+														<tr>
+															<td>
+																<table width="389" align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 389px;" class="table1-3">
+																	<tr>
+																		<td align="left" style="line-height: 1;color: #282828;font-size: 14px; font-weight: 600; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:right;direction:rtl; mso-line-height-rule: exactly;">
+																			<div class="editable-text">
+																				<img src="{% mention.content.source.image %}" alt="{%  mention.content.source.platform.name %}" width="30" height="30" style="border-radius:50%;" />&nbsp;<span class="text_container" style="display:block;margin-top:6px">{%  mention.content.source.name %}</span>
+																			</div>
+																		</td>
+																	</tr>
+
+																	<!-- horizontal gap -->
+																	<tr>
+																		<td height="10"></td>
+																	</tr>
+
+																	<tr>
+																		<td align="left" style="line-height: 1.8;color: #757575;font-size: 12px; font-weight: 400; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:right	;direction:rtl; mso-line-height-rule: exactly;">
+																			<div class="editable-text">
+																				<span class="text_container">{% mention.summary %}</span>
+																			</div>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<!-- margin-bottom -->
+														<tr class="tablet_hide">
+															<td height="20"></td>
+														</tr>
+													</table>
+													<!-- ENd column-1 -->
+
+													<!-- vertical gutter -->
+													<table class="table1-3" width="19" align="left" border="0" cellpadding="0" cellspacing="0">
+														<tr>
+															<td height="1"></td>
+														</tr>
+													</table>
+
+													<!-- column-2 -->
+													<table width="80" class="table1-3" align="right" border="0" cellpadding="0" cellspacing="0">
+														<!-- margin-top -->
+														<tr>
+															<td height="35"></td>
+														</tr>
+														<tr>
+															<td valign="top">
+																<table align="center" border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td align="center" style="line-height: 1;color: #282828;font-size: 14px; font-weight: 600; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:center;direction:rtl; mso-line-height-rule: exactly;">
+																			<div class="editable-text">
+																				<img src="{%  mention.content.source.provider.logo %}" alt="{% source.provider.name %}" width="30" height="30" style="border-radius:50%;" />
+																			</div>
+																		</td>
+																	</tr>
+
+																	<!-- horizontal gap -->
+																	<tr>
+																		<td height="15"></td>
+																	</tr>
+
+																	<tr>
+																		<td align="center" style="line-height: 1;color: #5e35b1;font-size: 14px; font-weight: 600; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:center;direction:rtl; mso-line-height-rule: exactly;">
+																			<table bgcolor="#93c054" width="60" height="30" align="center" border="0" cellpadding="0" cellspacing="0" style="border-radius:5px; border-collapse: separate">
+																				<tr>
+																					<td mc:edit="text105" align="center" valign="middle" style="font-size: 12px; font-weight: 400; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;mso-line-height-rule: exactly;">
+																						<div class="editable-text">
+																							<span class="text_container">
+																								<a href="#" class="text_color_ffffff" style="text-decoration: none; color: #ffffff;">مشاهده</a>
+																							</span>
+																						</div>
+																					</td>
+																				</tr>
+																			</table>
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+														<!-- margin-bottom -->
+														<tr>
+															<td height="20"></td>
+														</tr>
+													</table>
+													<!-- ENd column-2 -->
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!-- END row-without-image -->
+
+								<!-- horizontal gap -->
+								<tr>
+									<td height="15"></td>
+								</tr>
+									{% endif %}
+								<!-- buttons -->
+								<tr>
+									<td align="center">
+										<table align="center" border="0" cellspacing="0" cellspacing="0">
+											<tr>
+												<td>
+													<table bgcolor="#5e35b1" width="150" height="45" align="center" border="0" cellpadding="0" cellspacing="0" style="border-radius:5px; border-collapse: separate">
+														<tr>
+															<td mc:edit="text103" align="center" valign="middle" style="font-size: 14px; font-weight: 400; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif; mso-line-height-rule: exactly;">
+																<div class="editable-text">
+																	<span class="text_container">
+																		<a href="#" class="text_color_ffffff" style="text-decoration: none; color: #ffffff;">رفتن به اینباکس</a>
+																	</span>
+																</div>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr><!-- END buttons -->
+							</table>
+							<!-- END body-container -->
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!-- END body -->
+
+		<!-- horizontal gap -->
+		<tr>
+			<td height="20"></td>
+		</tr>
+
+		<!-- footer -->
+		<tr>
+			<td>
+				<table class="table1" width="600" align="center" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td align="center" style="line-height: 1;color: #757575; font-size: 14px; font-weight: 400; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:center;direction:rtl; mso-line-height-rule: exactly;">
+							<div class="editable-text">
+								<span class="text_container">&copy; تمامی حقوق برای <a href="#" style="text-decoration:none;color:#5e35b1;">پویارسانه</a> محفوظ است.</span>
+							</div>
+						</td>
+					</tr>
+					<!-- horizontal gap -->
+					<tr>
+						<td height="15"></td>
+					</tr>
+
+					<tr>
+						<td align="center" style="line-height: 1;color: #c6c6c6; font-size: 14px; font-weight: 400; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:center;direction:rtl; mso-line-height-rule: exactly;">
+							<!-- social icons -->
+							<table class="no_float" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td>
+										<table width="135" align="center" border="0" cellspacing="0" cellpadding="0" style="max-width: 135px;">
+											<tr>
+												<td align="center">
+													<a href="#">
+														<img class="centerize" src="http://staging.newsbx.com/static/email/twitter.png" style="display:block; line-height:0; font-size:0; border:0;;width:32px" border="0" alt="image" />
+													</a>
+												</td>
+												<td align="center">
+													<a href="#">
+														<img class="centerize" src="http://staging.newsbx.com/static/email/facebook.png" style="display:block; line-height:0; font-size:0; border:0;width:32px" border="0" alt="image" />
+													</a>
+												</td>
+												<td align="center">
+													<a href="#">
+														<img class="centerize" src="http://staging.newsbx.com/static/email/instagram.png" style="display:block; line-height:0; font-size:0; border:0;;width:32px" border="0" alt="image" />
+													</a>
+												</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<!-- horizontal gap -->
+								<tr>
+									<td height="20"></td>
+								</tr>
+								<tr>
+									<td align="center" style="line-height: 1;color: #757575; font-size: 12px; font-weight: 400; font-family: 'IranYekan', 'IranSans', 'BYekan', 'XYekan', 'Yekan', 'Noto Naskh Arabic', Tahoma, sans-serif;text-align:center;direction:rtl; mso-line-height-rule: exactly;">
+										<div class="editable-text">
+											<span class="text_container"><a href="#" style="text-decoration:none;color:#5e35b1;">لغو اشتراک</a></span>
+										</div>
+									</td>
+								</tr>
+								<!-- margin-bottom -->
+								<tr>
+									<td height="30"></td>
+								</tr>
+							</table>
+							<!-- END social icons -->
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!-- END footer -->
+
+		<!-- padding-bottom -->
+		<tr>
+			<td height="100"></td>
+		</tr>
+	</table>
+
+</body>
+
+</html>
+
+'''

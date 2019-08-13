@@ -1,0 +1,7 @@
+sudo apt-get install redis-server
+redis server
+
+# The client is useful for connecting directly to the Redis server without any Python code
+# redis-cli
+
+pip install redis

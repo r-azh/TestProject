@@ -1,0 +1,26 @@
+# http://flask-user.readthedocs.io/en/v0.6/internationalization.html
+# https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiv-i18n-and-l10n
+
+
+cd ~/path/to/YOURAPP/YOURAPP
+cp -r ~/.virtualenvs/YOURENV/lib/python3.5/site-packages/flask_user/translations .
+ls translations
+
+# pybabel extract extracts Messages into a .pot template file.
+pybabel extract -F TestPython/test_flask_locale/test_flask_babel/app/babel.cfg -o messages.pot TestPython/test_flask_locale/test_flask_babel/app
+
+# create translation file from .pot but replace the existing file with all translations(puts the
+ result in translations folder). we should do the translations in .po file:
+pybabel init -i messages.pot -d TestPython/test_flask_locale/test_flask_babel/app/translations -l fa
+
+
+# creates a .mo file from .po file to be used in app
+pybabel compile -d TestPython/test_flask_locale/test_flask_babel/app/translations
+
+
+# if we missed some strings we can update with adding gettext() and then using following commands:
+# pybabel update converts the .pot template file into a language specific .po translations file.
+pybabel extract -F TestPython/test_flask_locale/test_flask_babel/app/babel.cfg -o messages.pot TestPython/test_flask_locale/test_flask_babel/app
+pybabel update -i messages.pot -d TestPython/test_flask_locale/test_flask_babel/app/translations
+# do the translations then:
+pybabel compile -d TestPython/test_flask_locale/test_flask_babel/app/translations

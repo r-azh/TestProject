@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+message payload {
+    repeated param params = 1;
+    string type = 2;
+    string token = 3;
+    user user = 4;
+    param domain = 5;
+}
+
+message user {
+    int64 id = 1;
+    string name = 2;
+    string activation_status = 3;
+}
+
+message param {
+    int64 id = 1;
+    string name = 2;
+}
+

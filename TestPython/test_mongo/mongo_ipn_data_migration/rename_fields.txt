@@ -1,0 +1,62 @@
+var bulk = db.person.initializeOrderedBulkOp(),
+    count = 0;
+
+db.person.find({ "following_companies.image": { "$exists": true } }).forEach(function(doc) {
+    doc.following_companies.forEach(function(company) {
+        if ( company.hasOwnProperty("image") ) {
+            bulk.find({ "_id": doc._id, "following_companies._id": company._id }).updateOne({
+                "$set": { "following_companies.$.logo": company.image }
+            });
+            bulk.find({ "_id": doc._id, "following_companies._id": company._id }).updateOne({
+                "$unset": { "following_companies.$.image": 1 }
+            });
+            count += 2;
+
+            if ( count % 500 == 0 ) {
+                bulk.execute();
+                bulk = db.collection.initializeOrderedBulkOp();
+            }
+        }
+    });
+});
+
+if ( count % 500 !== 0 )
+    bulk.execute();
+
+
+----------------------------------------------------
+var bulk = db.person.initializeOrderedBulkOp(),
+    count = 0;
+
+db.person.find({ "following_groups.title": { "$exists": true } }).forEach(function(doc) {
+    doc.following_groups.forEach(function(company) {
+        if ( company.hasOwnProperty("title") ) {
+            bulk.find({ "_id": doc._id, "following_groups._id": company._id }).updateOne({
+                "$set": { "following_groups.$.name": company.title }
+            });
+            bulk.find({ "_id": doc._id, "following_groups._id": company._id }).updateOne({
+                "$unset": { "following_groups.$.title": 1 }
+            });
+            count += 2;
+
+            if ( count % 500 == 0 ) {
+                bulk.execute();
+                bulk = db.collection.initializeOrderedBulkOp();
+            }
+        }
+    });
+});
+
+if ( count % 500 !== 0 )
+    bulk.execute();
+
+----------------
+db.post.find({ "container_info.title": { "$exists": true } })
+
+-----------------
+
+db.post.update({ "container_info.title": { "$exists": true } }, {$rename:{"container_info.title":"container_info.name"}}, false, true);
+
+-------------------
+
+db.post.update({ "container_info.image": { "$exists": true } }, {$rename:{"container_info.image":"container_info.logo"}}, false, true);

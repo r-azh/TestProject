@@ -1,0 +1,6 @@
+telegram channel:
+1-create a bot in botfather and get botname and token
+2-create a channel and make it public  (you can set it private later)
+3-add bot to channel admins (There will be no bots in contact list, so you need to search for it. Enter your bot's username )
+4-set a channel id by setting the channel url (like telegram.me/whateverIWantAndAvailable)
+5-give channel id and bot token to app

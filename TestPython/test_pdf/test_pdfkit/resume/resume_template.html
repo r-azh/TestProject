@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        @font-face {
+            font-family: "b-yekan";
+            src: url("{{path}}/fonts/b_yekan.eot?v=1.5.2");
+            src: url("{{path}}/fonts/b_yekan.eot?v=1.5.2#iefix") format("embedded-opentype"), url("{{path}}/fonts/b_yekan.ttf?v=1.5.2") format("truetype"), url("{{path}}/fonts/b_yekan.woff?v=1.5.2") format("woff");
+            font-weight: normal;
+            font-style: normal; }
+        html{
+            direction: rtl;
+        }
+        body{
+            padding:0px  20px;
+            font-family: 'b-yekan';
+            color:#5d5d5d;
+        }
+        .block li{
+            margin-bottom: 20px;
+        }
+        b{
+            color:#000;
+        }
+        .pull-left{
+            float: left;
+        }
+        .pull-right{
+            float: right;
+        }
+        .user-img{
+            width: 100px;
+            display: block;
+        }
+        .name {
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: inline-block;
+        }
+        .inline-block{
+            display: inline-block;
+        }
+        label {
+            margin-bottom: 10px;
+            display: inline-block;
+            margin-left: 3px;
+        }
+        .block{
+            margin-top: 30px;
+        }
+        .information-box{
+            padding-right: 190px;
+        }
+        .date{
+            width: 190px;
+        }
+        .WORK-EXPERIENCE li{
+            display: block;
+        }
+        .information-box label{
+            width: 300px;
+        }
+        .padding{
+            padding-right: 15px;
+        }
+        .block-box{
+            width:100%;
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+
+<div >
+    <img src={{'{}/{}'.format(path,"images/logo-small.png")}}
+         alt="logo.png">
+    <hr>
+</div>
+
+
+
+<div class="block-box inline-block">
+    {% if person.image %}
+    <img src={{person.image|e}}" alt="profileimage" class="user-img pull-right">
+    {% else %}
+    <img src="data:image/png;base64,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
+            AElFTkSuQmCC" alt="beastie.png" class="user-img pull-right">
+    {% endif %}
+    <div class="inline-block padding">
+        <b class="name">
+            {{person.name}} {{person.last_name}}
+        </b>
+        <br>
+        {% if person.birthday %}
+        <label>تاریخ تولد: </label><span>{{person.birthday}}</span>
+        <br>
+        {% endif %}
+        {% if person.gender %}
+        <label>جنسیت: </label><span>{{person.gender}}</span>
+        <br>
+        {% endif %}
+        {% if person.is_married %}
+        <label>وضعیت تاهل: </label><span>{{person.is_married}}</span>
+        <br>
+        {% endif %}
+        {% if person.phone %}
+        <label>تلفن ثابت: </label><span>{{person.phone}}</span>
+        <br>
+        {% endif %}
+        {% if person.mobile %}
+        <label>تلفن همراه: </label><span>{{person.mobile}}</span>
+        <br>
+        {% endif %}
+        {% if person.email %}
+        <label>پست الکترونیکی: </label><span>{{person.email}}</span>
+        <br>
+        {% endif %}
+        {% if person.address %}
+        <label>محل سکونت: </label><span>{{person.address}}</span>
+        <br>
+        {% endif %}
+        {% if person.military_service_status %}
+        <label>وضعیت خدمت: </label><span>{{person.military_service_status}}</span>
+        <br>
+        {% endif %}
+        {% if person.requested_wage %}
+        <label>حقوق درخواستی: </label><span>{{person.requested_wage}}</span><small>ریال</small>
+        {% endif %}
+        {% if person.is_job_seeking %}
+        <span>(در جستجوی کار هستم)</span>
+        {% endif %}
+    </div>
+</div>
+
+
+{% if person.experiences %}
+<div class="block">
+    <b>سوابق کاری</b>
+    <hr>
+    <ul class="WORK-EXPERIENCE">
+        {% for experience in person.experiences %}
+        <li>
+            <div class="pull-right date">
+                <span>{{experience.from_date }}</span> -
+                {% if experience.to_date %}
+                <span >{{experience.to_date }}</span>
+                {% else %}
+                <span >اکنون</span>
+                {% endif %}
+
+            </div>
+            <div class="information-box ">
+                <b>{{experience.company.name}}</b>
+                <span class="pull-left">{{experience.location}}</span>
+                <br>
+                <span>{{experience.title}}</span>
+                <br>
+                {% if experience.wage %}
+                <span>حقوق دریافتی: </span><span>{{experience.wage}}</span><small>ریال</small>
+                {% endif %}
+
+                {% if experience.description %}
+                <p>
+                    {{experience.description}}
+                </p>
+                {% endif %}
+
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+
+{% if person.educations %}
+<div class="block">
+    <b>سوابق تحصیلی</b>
+    <hr>
+    <ul class="WORK-EXPERIENCE">
+        {% for education in person.educations %}
+        <li>
+            <div class="pull-right date">
+                <span>{{education.date_attended_from }}</span> -
+                {% if education.date_attended_to %}
+                <span >{{education.date_attended_to }}</span>
+                {% else %}
+                <span >اکنون</span>
+                {% endif %}
+            </div>
+
+            <div class="information-box ">
+                {% if education.school_title %}
+                <b>{{education.school_title}}</b>
+                <br>
+                {% endif %}
+                <span>{{education.field_of_study}}</span>
+                -
+                <span>{{education.degree}}</span>
+                <br>
+                {% if education.grade %}
+                <span>معدل: </span><span>{{education.grade}}</span>
+                {% endif %}
+                {% if education.description %}
+                <p>
+                    {{education.description }}
+                </p>
+                {% endif %}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+{% if person.languages %}
+<div class="block">
+    <b>زبان ها</b>
+    <hr>
+    <ul class="WORK-EXPERIENCE">
+        {% for language in person.languages %}
+        <li>
+            <div class="pull-right date"></div>
+            <div class="information-box ">
+                <label>
+                    {{language.name}}
+                </label>
+                    <span>
+                        {{language.proficiency}}
+                    </span>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+{% endif %}
+
+{% if person.interest %}
+<div class="block">
+    <b>علایق شخصی</b>
+    <hr>
+    <ul class="WORK-EXPERIENCE">
+        <li>
+            <div class="pull-right date"></div>
+            <div class="information-box ">
+                {{person.interest}}
+            </div>
+        </li>
+
+    </ul>
+
+</div>
+{% endif %}
+
+
+</body>
+</html>

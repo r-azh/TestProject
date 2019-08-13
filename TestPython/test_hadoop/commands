@@ -1,0 +1,60 @@
+
+# to put file in hdfs
+$ hdfs dfs -mkdir /my_storage
+$ hdfs dfs -put LICENSE.txt /my_storage
+$ or
+$ hadoop fs -put ./localfile.txt /home/matthew/remotefile.txt
+
+
+
+# to view files
+$ hdfs dfs -cat /my_storage/LICENSE.txt
+hadoop fs -text /my_storage/LICENSE.txt
+$ hdfs dfs -ls /my_storage/
+$ hadoop fs -ls /
+# list files in my home directory
+
+# hdfs dfs -mkdir /input
+# hdfs dfs -copyFromLocal /usr/local/hadoop/my_python_test/* /input
+# hdfs dfs -rm -R /output*
+
+
+hadoop fs -ls ./
+
+# to get file from hdfs
+$ hdfs dfs -get /my_storage/ ./
+$ or
+$ hadoop fs -get /home/matthew/remotefile.txt ./local/file/path/file.txt
+
+
+
+$ hdfs dfs -help
+
+# in browser
+# For Hadoop Overview of NameNode service.
+http://hdfs_ip_address:hdfs_port
+http://192.168.1.41:50070
+
+# For Hadoop file system browsing (Directory Browse).
+http://192.168.1.41:50070/explorer.html
+
+
+# For Cluster and Apps Information (ResourceManager).
+http://192.168.1.41:8088
+
+# For NodeManager Information.
+http://192.168.1.41:8042
+
+
+# for running python mapreduce
+
+find / -name 'hadoop-streaming*.jar'
+# /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.8.0.jar
+
+#cd /usr/local/hadoop
+$bin/hadoop jar share/hadoop/tools/lib/hadoop-streaming-2.8.0.jar \
+-files my_python_tests/mapper.py,my_python_tests/reducer.py \
+-input /gutenberg/* \
+-output /output \
+-mapper my_python_tests/mapper.py \
+-reducer my_python_tests/reducer.py

@@ -1,0 +1,16 @@
+sudo django-admin startproject django_pollsapi
+
+sudo python3 manage.py migrate
+
+sudo python3.4 manage.py startapp pollsapi
+
+sudo python3.4  manage.py makemigrations pollsapi
+
+sudo python3.4  manage.py test
+
+
+
+
+def get_serializer_context(self):
+    print(self.request.data)
+    return {'request': self.request}
