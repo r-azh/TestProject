@@ -190,26 +190,8 @@ def compute_eta(last_mean_time, iteration, current_duration, total_iterations):
 
 
 if __name__ == '__main__':
-    get_duplicate_files(['D:\\to hard\\mp3\\Celin Dion'], True)
-    # remove_duplicate_files(['D://to hard//topc//cleaned up'], True)
-    # remove_duplicate_files(['C:\\_Data_\\TED talk'], True)
-    # remove_duplicate_files(['D:\\to hard\\mp3', 'D:\\to hard\\mp3\\Mix'], False)
-
-    #remove_duplicate_files('c:/downloads', 'c:/down')
-    #remove_duplicate_files('c:/down')
-    #remove_duplicate_files('I:/r/_clean up/_clean_up_')
-    #remove_duplicate_files('I:/SARA/nn')
-    #remove_duplicate_files_traversal('I:/r/_clean up')
-    #remove_duplicate_files_traversal('G:\\rezvan\\cooking\\pic')
-    #remove_duplicate_files_traversal('Q:\\learn')
-    #remove_duplicate_files('H:\\rezvan\\__\\mp3')
-    #remove_duplicate_files_traversal('/home/azh/Downloads/topc2')
-    #remove_duplicate_files_traversal('N:/fariba/r/tohard/cleanup')
-    #remove_duplicate_files_traversal('G:\\rezvan\\cooking\\_movie')
-    #remove_duplicate_files_traversal('H:\\rezvan\\0_uni\\Bachelor courses')
-    #remove_duplicate_files_traversal('I:\\r\\german\\german movie')
-    #remove_duplicate_files('N:/fariba/r/tohard/topc-')
+    get_duplicate_files(['D:topc//cleaned up'], True)
+    # remove_duplicate_files(['D://topc//cleaned up'], True)
     #remove_duplicate_files('D:\\rez\\__\\cleanup', 'I:\\r\\_clean up\\_clean_up_')
-    #remove_duplicate_files('I:/r/_clean up/_clean_up_', 'D:\\rez\\__\\from mobile\\Telegram Video')
-	
+
 

@@ -92,8 +92,6 @@ def rename_mp3(dir):
 
 
 rename_mp3('H:\\mp3\\deutch'.replace('\\', '/'))
-# rename_mp3('D:\\to hard\\mp3'.replace('\\', '/'))
-# rename_mp3('C:\\_Data_\\topc\\mp3\\rename'.replace('\\', '/'))
 # rename_mp3('.')
 
 # audio['title'] = u"Example Title"

@@ -88,10 +88,4 @@ def remove_duplicate_files(dir1, dir2=None):
 
 if __name__ == '__main__':
     #remove_duplicate_files('c:/downloads', 'c:/down')
-    #remove_duplicate_files('c:/down')
-    #remove_duplicate_files('I:/r/_clean up/_clean up')
-    #remove_duplicate_files('I:\\sara--')
-    #remove_duplicate_files('/home/azh/Downloads/topc2')
-    #remove_duplicate_files('C:\\downloads\\ara\\maman\\Telegram Video')
-    #remove_duplicate_files('I:\\r\\DVD then delete\\kar')
-    remove_duplicate_files('H:\\rezvan\\mp3\\jap music\\Japanese Top 100 Love Songs\\complete')
+    remove_duplicate_files('I:/r/_clean up')

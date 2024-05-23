@@ -18,5 +18,4 @@ def remove_empty_directories_traversal(source_dir, remove_source_dir_tree=False)
         import shutil
         shutil.rmtree(source_dir)
 
-#remove_empty_directories_traversal('I:/SARA/nn')
 remove_empty_directories_traversal('I:/r/_clean up')

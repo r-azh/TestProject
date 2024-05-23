@@ -42,5 +42,4 @@ def merge_same_name_directories_traversal(source_dir, target_dir):
     shutil.rmtree(source_dir)
     # os.rmdir(dir)
 
-#merge_same_name_directories_traversal('/home/azh/Downloads/topc2', '/home/azh/Downloads/topc3')
-merge_same_name_directories_traversal('I:/SARA/n', 'I:/SARA/nn')
+merge_same_name_directories_traversal('I:/r/n', 'I:/r/nn')

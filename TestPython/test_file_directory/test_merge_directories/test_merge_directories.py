@@ -40,4 +40,4 @@ def merge_directories_traversal(source_dir, target_dir=None):
         import shutil
         shutil.rmtree(source_dir)
 
-merge_directories_traversal('I:/SARA/nn/o', 'I:/SARA/nn/oo')
+merge_directories_traversal('I:/r/nn/o', 'I:/r/nn/oo')

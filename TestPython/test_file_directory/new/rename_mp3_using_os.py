@@ -101,11 +101,8 @@ def rename_mp3(dir, force_rename=False):
     print('Renamed %s files' % renamed_count)
 
 
-# rename_mp3('D:\\to hard\\mp3\\Celin Dion'.replace('\\', '/'))
-rename_mp3('D:\\to hard\\mp3\\Celin Dion'.replace('\\', '/'), True)
-# rename_mp3('D:\\to hard\\mp3'.replace('\\', '/'))
-# rename_mp3('C:\\_Data_\\topc\\mp3\\rename'.replace('\\', '/'))
-# rename_mp3('.')
+# rename_mp3('D:\\to hard\\mp3\\a'.replace('\\', '/'))
+rename_mp3('D:\\to hard\\mp3\\a'.replace('\\', '/'), True)
 
 # audio['title'] = u"Example Title"
 # audio['artist'] = u"Me"
